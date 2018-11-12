@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>remote-ws-client-parent-service</artifactId>
+        <groupId>com.magicvalleyworks.remotewsclient</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../remote-ws-client-parent/remote-ws-client-parent-service</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>remote-ws-client-service</artifactId>
+    <packaging>ejb</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.magicvalleyworks.remotewstarget</groupId>
+            <artifactId>remote-ws-target-ws-facade-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ejb-plugin</artifactId>
+                <configuration>
+                    <ejbVersion>3.2</ejbVersion>
+                    <generateClient>false</generateClient>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
