@@ -16,8 +16,21 @@
     <dependencies>
         <dependency>
             <groupId>com.magicvalleyworks.remotewstarget</groupId>
-            <artifactId>remote-ws-target-ws-facade-api</artifactId>
+            <artifactId>remote-ws-target-facade-ws-api</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.magicvalleyworks.remotewstarget</groupId>
+            <artifactId>remote-ws-target-facade-ws-api-proxy</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>*</artifactId>
+                    <groupId>*</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
