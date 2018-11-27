@@ -8,11 +8,10 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 
 @ApplicationScoped
-public class SimpleWebServiceBeanFactory extends AbstractConsulBasedWebServiceFactory<SimpleWebService, SimpleWebService_Service> {
+public class SimpleWebServiceBeanFactory extends AbstractConsulBasedWebServiceFactory {
     @Produces
     @ApplicationScoped
-    @Override
-    public SimpleWebService createWebService() {
-        return createPort(new SimpleWebService_Service(), SimpleWebService.class, "SimpleWebService");
+    public SimpleWebService createSimpleWebServiceBean() {
+        return createWebServicePort(new SimpleWebService_Service(), SimpleWebService.class, "SimpleWebService");
     }
 }
